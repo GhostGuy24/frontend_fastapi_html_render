@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FastAPI HTML Example (Axios)</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>  </head>
+<body>
+    <div id="content">
+        Loading...
+    </div>
+
+    <script>
+        const contentDiv = document.getElementById('content');
+
+        axios.get('/data')  
+            .then(response => {
+                contentDiv.textContent = response.data.message; // Access data correctly
+            })
+            .catch(error => {
+                console.error("Error fetching data:", error);
+                contentDiv.textContent = "Error loading data.";
+            });
+    </script>
+</body>
+</html>
