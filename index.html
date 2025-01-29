@@ -11,7 +11,7 @@
     <script>
         const contentDiv = document.getElementById('content');
 
-        axios.get('/data')  
+        axios.get('https://fastapi-render-11.onrender.com')  
             .then(response => {
                 contentDiv.textContent = response.data.message; // Access data correctly
             })
